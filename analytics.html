@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Analytics – HannahAI Admin</title>
+  <link rel="icon" href="assets/logo.svg"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabaseClient.js"></script>
+  <script src="data.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <span class="brand"><img src="assets/logo.svg" alt="logo"/><b>HannahAI Admin</b></span>
+      <a href="dashboard.html#overview" data-route="overview">Overview</a>
+      <a href="dashboard.html#calls" data-route="calls">Calls</a>
+      <!-- Numbers moved into Settings tab -->
+      <a href="dashboard.html#analytics" data-route="analytics" class="active">Analytics</a>
+      <a href="dashboard.html#settings" data-route="settings">Settings</a>
+      <a href="profile.html">Profile</a>
+      <span class="right"></span>
+      <div class="theme-toggle">
+        <span class="icon" aria-hidden="true">🌙</span>
+        <label class="switch" title="Toggle light/dark theme">
+          <input type="checkbox" id="themeToggle" aria-label="Toggle light/dark theme">
+          <span class="slider"></span>
+        </label>
+        <span class="icon" aria-hidden="true">☀️</span>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div id="view"></div>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      // Force route before loading app
+      location.hash = 'analytics';
+      const s = document.createElement('script'); s.src='app.js'; document.body.appendChild(s);
+    });
+  </script>
+</body>
+</html>
+
+

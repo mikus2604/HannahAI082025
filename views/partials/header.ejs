@@ -1,0 +1,34 @@
+<header class="header">
+  <div class="container nav">
+    <span class="brand"><img src="/assets/logo.svg" alt="logo"/><b>HannahAI Admin</b></span>
+    <a href="/dashboard#overview" data-route="overview">Overview</a>
+    <a href="/dashboard#calls" data-route="calls">Calls</a>
+    <a href="/dashboard#analytics" data-route="analytics">Analytics</a>
+    <a href="/dashboard#settings" data-route="settings">Settings</a>
+    <a href="/superuser" id="superuserLink" style="display:none;">SuperUser</a>
+
+    <span class="right"></span>
+    <div class="theme-toggle" style="margin-right:12px">
+      <span class="icon" aria-hidden="true">🌙</span>
+      <label class="switch" title="Toggle light/dark theme">
+        <input type="checkbox" id="themeToggle" aria-label="Toggle light/dark theme">
+        <span class="slider"></span>
+      </label>
+      <span class="icon" aria-hidden="true">☀️</span>
+    </div>
+
+    <div class="avatar-menu" id="avatarMenuRoot">
+      <button id="avatarBtn" class="avatar-btn" aria-haspopup="true" aria-expanded="false">
+        <span id="avatarImg" class="avatar">U</span>
+      </button>
+      <div id="avatarDropdown" class="dropdown" style="display:none">
+        <a href="/profile" id="ddProfile">Profile</a>
+        <a href="/profile#security" id="ddSecurity">Security</a>
+        <a href="/profile#billing" id="ddBilling">Billing</a>
+        <hr/>
+        <button id="ddLogout" class="button outline" style="width:100%">Log out</button>
+      </div>
+    </div>
+  </div>
+</header>
+

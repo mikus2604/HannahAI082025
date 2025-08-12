@@ -1,0 +1,104 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>HannahAI – Landing</title>
+  <link rel="icon" href="assets/logo.svg"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Optional: directly embed Supabase config for local testing -->
+  <script>
+    // Uncomment and fill these if /supabase-config is not served correctly
+    // window.SUPABASE_URL = "";
+    // window.SUPABASE_ANON_KEY = "";
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabaseClient.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body class="landing">
+  <header class="header">
+    <div class="container nav">
+      <span class="brand"><img src="assets/logo.svg" alt="logo"/><b>HannahAI</b></span>
+      <span class="right"></span>
+      <a href="solutions.html" style="color:#fff">Solutions</a>
+      <a href="who-we-serve.html" style="color:#fff">Who we serve</a>
+      <a href="resources.html" style="color:#fff">Resources</a>
+      <a href="pricing.html" style="color:#fff">Pricing</a>
+      <a class="button outline-white" href="login.html" style="margin-left:8px">Login</a>
+      <a class="button orange" href="login.html">Get started</a>
+      <div class="theme-toggle">
+        <span class="icon" aria-hidden="true">🌙</span>
+        <label class="switch" title="Toggle light/dark theme">
+          <input type="checkbox" id="themeToggle" aria-label="Toggle light/dark theme">
+          <span class="slider"></span>
+        </label>
+        <span class="icon" aria-hidden="true">☀️</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container hero">
+    <section class="glass hero-grid bg-dark" style="margin:40px 0; padding:28px;">
+      <div>
+        <h1 class="hero-title">#1 virtual receptionist team for small businesses.</h1>
+        <p class="hero-sub">Multilingual reception. Customer satisfaction. Managed with Ruby. Human-powered and live chat tour.</p>
+        <div class="hero-ctas">
+          <a class="button pink" href="#">Discover Ruby</a>
+          <a class="button orange" href="#">Take a chat tour of Ruby</a>
+        </div>
+      </div>
+      <div class="hero-img glass">
+        <span class="sub">[ Phone mockup ]</span>
+      </div>
+    </section>
+
+    <section class="grid bg-lightblue" style="grid-template-columns: 1fr 1fr; align-items:stretch; padding:28px; border-radius:16px; margin-bottom:20px">
+      <div class="glass card">
+        <h3>Ruby. So much more than an answering service.</h3>
+        <p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="glass card">
+        <h3>Win back the workday.</h3>
+        <p class="muted">Virtual receptionists handle tasks like clock management, after-hours communication, continuous coverage, operations.</p>
+        <p class="muted">Ruby customers reclaim 10+ hours per month by delegating daily tasks.</p>
+        <div class="toolbar"><a class="button white" href="#">Customize Plan</a></div>
+      </div>
+    </section>
+
+    <section class="grid bg-white" style="grid-template-columns: 1fr 1fr; padding:28px; border-radius:16px; color:#0e1a2b">
+      <div class="card" style="background:#fff; border-color:#e6eaf5">
+        <h3 style="color:#0e1a2b">Our average answer time is under ten seconds.</h3>
+        <p class="muted" style="color:#3b4d6b">Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="card" style="background:#fff; border-color:#e6eaf5">
+        <h3 style="color:#0e1a2b">Increase customer loyalty.</h3>
+        <p class="muted" style="color:#3b4d6b">Anyone can create meaningful connections with the people you converse with who know how to turn even the shortest interactions into big wins for your business.</p>
+      </div>
+    </section>
+
+    <section class="glass card" style="text-align:center; padding:32px; margin:40px 0">
+      <h3>Let's connect.</h3>
+      <p class="sub">From capturing leads to saving you time, we've got your back.</p>
+      <div class="toolbar" style="justify-content:center">
+        <a class="button orange" href="login.html">Get started</a>
+      </div>
+    </section>
+    <div id="view" class="hidden"></div>
+  </main>
+
+  <div id="modalBackdrop" class="modal-backdrop">
+    <div id="modal" class="modal">
+      <div class="modal-content"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <footer class="footer">© 2025 HannahAI — Demo admin panel. Dummy data only.</footer>
+</body>
+</html>

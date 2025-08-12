@@ -1,0 +1,75 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Login – HannahAI</title>
+  <link rel="icon" href="assets/logo.svg"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Optional: directly embed Supabase config for local testing -->
+  <script>
+    // Uncomment and fill these if /supabase-config is not served correctly
+    // window.SUPABASE_URL = "";
+    // window.SUPABASE_ANON_KEY = "";
+  </script>
+  <script src="supabaseClient.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <!-- Cloudflare Turnstile -->
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <span class="brand"><img src="assets/logo.svg" alt="logo"/><b>HannahAI Admin</b></span>
+      <a href="dashboard.html#overview" data-route="overview">Overview</a>
+      <a href="dashboard.html#calls" data-route="calls">Calls</a>
+      <a href="dashboard.html#numbers" data-route="numbers">Numbers</a>
+      <a href="dashboard.html#analytics" data-route="analytics">Analytics</a>
+      <a href="dashboard.html#settings" data-route="settings">Settings</a>
+      <a href="profile.html">Profile</a>
+      <span class="right"></span>
+      <div class="theme-toggle">
+        <span class="icon" aria-hidden="true">🌙</span>
+        <label class="switch" title="Toggle light/dark theme">
+          <input type="checkbox" id="themeToggle" aria-label="Toggle light/dark theme">
+          <span class="slider"></span>
+        </label>
+        <span class="icon" aria-hidden="true">☀️</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="max-width:760px">
+    <section class="card" style="margin:32px auto">
+      <h3>Welcome back</h3>
+      <div class="tabs" id="loginTabs">
+        <div class="tab active" data-mode="signin">Sign In</div>
+        <div class="tab" data-mode="signup">Create Account</div>
+      </div>
+
+      <form id="loginForm">
+        <!-- Sign up only fields (shown when Create Account tab active) -->
+        <div class="toolbar" id="nameRow" style="display:none"><input id="full_name" class="input" type="text" placeholder="Full name" style="width:100%"/></div>
+        <div class="toolbar" id="companyRow" style="display:none"><input id="company" class="input" type="text" placeholder="Company name" style="width:100%"/></div>
+        <div class="toolbar" id="phoneRow" style="display:none"><input id="phone" class="input" type="tel" placeholder="Contact number" style="width:100%"/></div>
+
+        <!-- Common fields -->
+        <div class="toolbar"><input id="email" class="input" type="email" placeholder="Email address" autocomplete="email" required style="width:100%"/></div>
+        <div class="toolbar"><input id="password" class="input" type="password" placeholder="Password" autocomplete="current-password" required style="width:100%"/></div>
+        <div class="toolbar"></div>
+        <div class="toolbar">
+          <button class="button" id="emailSubmit" type="submit">Sign In</button>
+          <button class="button" id="googleBtn" type="button" style="margin-left:auto">Continue with Google</button>
+        </div>
+        <p id="authMsg" style="color:var(--bad); min-height:1.2em"></p>
+      </form>
+      <p class="sub">By continuing you agree to our Terms & Privacy Policy.</p>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="login.js"></script>
+</body>
+</html>

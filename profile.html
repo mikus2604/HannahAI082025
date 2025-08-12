@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Profile – HannahAI</title>
+  <link rel="icon" href="assets/logo.svg"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabaseClient.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <span class="brand"><img src="assets/logo.svg" alt="logo"/><b>HannahAI Admin</b></span>
+      <a href="dashboard.html#overview" data-route="overview">Overview</a>
+      <a href="dashboard.html#calls" data-route="calls">Calls</a>
+      <!-- Numbers moved into Settings tab -->
+      <a href="dashboard.html#analytics" data-route="analytics">Analytics</a>
+      <a href="dashboard.html#settings" data-route="settings">Settings</a>
+      <a href="profile.html">Profile</a>
+      <span class="right"></span>
+      <div class="theme-toggle">
+        <span class="icon" aria-hidden="true">🌙</span>
+        <label class="switch" title="Toggle light/dark theme">
+          <input type="checkbox" id="themeToggle" aria-label="Toggle light/dark theme">
+          <span class="slider"></span>
+        </label>
+        <span class="icon" aria-hidden="true">☀️</span>
+      </div>
+      <button id="logoutBtn" class="button" title="Log out">Logout</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h3>Your Account</h3>
+      <div class="tabs" id="profileTabs">
+        <div class="tab active" data-tab="profile">Profile Info</div>
+        <div class="tab" data-tab="security">Security</div>
+        <div class="tab" data-tab="billing">Billing</div>
+      </div>
+      <div id="profileBody"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="profile.js"></script>
+</body>
+</html>

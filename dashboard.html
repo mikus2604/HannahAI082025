@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Dashboard – HannahAI Admin</title>
+  <link rel="icon" href="assets/logo.svg"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabaseClient.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <span class="brand"><img src="assets/logo.svg" alt="logo"/><b>HannahAI Admin</b></span>
+      
+      <a href="#overview" data-route="overview" class="active">Overview</a>
+      <a href="#calls" data-route="calls">Calls</a>
+      <a href="#analytics" data-route="analytics">Analytics</a>
+      
+      <!-- Numbers moved into Settings tab -->
+      <a href="profile.html">Profile</a>
+      <span class="right"></span>
+      <div class="theme-toggle">
+        <span class="icon" aria-hidden="true">🌙</span>
+        <label class="switch" title="Toggle light/dark theme">
+          <input type="checkbox" id="themeToggle" aria-label="Toggle light/dark theme">
+          <span class="slider"></span>
+        </label>
+        <span class="icon" aria-hidden="true">☀️</span>
+      </div>
+      <a href="profile.html" class="badge">Profile ▾</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="view"></div>
+  </main>
+
+  <div id="modalBackdrop" class="modal-backdrop">
+    <div id="modal" class="modal">
+      <div class="modal-content"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script>
+    // Ensure demo data is available before the app mounts
+  </script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <footer class="footer">© 2025 HannahAI — Admin dashboard.</footer>
+</body>
+</html>
+
+

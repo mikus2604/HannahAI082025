@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Solutions – HannahAI</title>
+  <link rel="icon" href="assets/logo.svg"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="landing">
+  <header class="header">
+    <div class="container nav">
+      <span class="brand"><img src="assets/logo.svg" alt="logo"/><b>HannahAI</b></span>
+      <span class="right"></span>
+      <a href="solutions.html" style="color:#fff">Solutions</a>
+      <a href="who-we-serve.html" style="color:#fff">Who we serve</a>
+      <a href="resources.html" style="color:#fff">Resources</a>
+      <a href="pricing.html" style="color:#fff">Pricing</a>
+      <a class="button outline-white" href="login.html" style="margin-left:8px">Login</a>
+      <a class="button orange" href="login.html">Get started</a>
+      <div class="theme-toggle">
+        <span class="icon" aria-hidden="true">🌙</span>
+        <label class="switch" title="Toggle light/dark theme">
+          <input type="checkbox" id="themeToggle" aria-label="Toggle light/dark theme">
+          <span class="slider"></span>
+        </label>
+        <span class="icon" aria-hidden="true">☀️</span>
+      </div>
+    </div>
+  </header>
+  <main class="container hero">
+    <section class="glass" style="padding:24px; margin:28px 0">
+      <h1 class="hero-title">Solutions</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer faucibus, tellus at ullamcorper porta, risus augue facilisis lorem, nec posuere sapien nunc a nibh.</p>
+    </section>
+    <section class="grid" style="grid-template-columns: 1fr 1fr 1fr">
+      <div class="glass card"><h3>AI Reception</h3><p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+      <div class="glass card"><h3>Bookings</h3><p class="muted">Mauris non faucibus lorem. Integer dictum, libero nec placerat.</p></div>
+      <div class="glass card"><h3>Follow-ups</h3><p class="muted">Vestibulum ante ipsum primis in faucibus orci luctus et.</p></div>
+    </section>
+    <section class="glass card" style="margin:24px 0">
+      <h3>How it works</h3>
+      <p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a gravida nisi. Suspendisse potenti. Nulla feugiat leo nec lorem fermentum, et pulvinar libero hendrerit.</p>
+    </section>
+  </main>
+  <footer class="footer">© 2025 HannahAI</footer>
+  <script>
+    const saved = localStorage.getItem('theme')||'dark'; document.documentElement.setAttribute('data-theme', saved);
+    const tog = document.getElementById('themeToggle'); if(tog){ tog.checked = (saved==='light'); tog.addEventListener('change', ()=>{ const t=tog.checked?'light':'dark'; document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); }); }
+  </script>
+</body>
+</html>
+
+

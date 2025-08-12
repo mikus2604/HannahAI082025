@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperUser Admin - HannahAI</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <%- include('partials/header', { currentRoute: 'superuser' }) %>
+  
+  <main class="container">
+    <div class="tabs" id="superuserTabs">
+      <div class="tab" data-tab="users">Users</div>
+      <div class="tab" data-tab="security">Security</div>
+      <div class="tab" data-tab="billing">Billing Overview</div>
+      <div class="tab" data-tab="superusers">SuperUser Management</div>
+    </div>
+    <div id="superuserBody"></div>
+  </main>
+
+  <script src="/supabaseClient.js"></script>
+  <script src="/data.js"></script>
+  <script src="/superuser.js"></script>
+</body>
+</html>
